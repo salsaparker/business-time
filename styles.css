@@ -10,6 +10,10 @@ h1 {
     font-size: 150px;
     margin: 20px;
 }
+header {
+    display: flex;
+    justify-content: center;
+}
 nav {
     display: flex;
     justify-content: space-evenly;
@@ -56,6 +60,8 @@ img {
 }
 .studio-img {
     margin: 5px;
+    opacity: 1;
+    transition: 0.3s;
 }
 p {
     margin: 20px;
@@ -76,13 +82,24 @@ footer {
     color: black;
     justify-content: center;
 }
+.studio-img:hover {
+    opacity: 0.6;
+}
+
 
 @media only screen and (max-width: 1025px) {
-    .nav-box {
-        display: flex;
-        flex-wrap: wrap;
+    nav {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    .studios-grid-container {
+        grid-template-columns: 1fr 1fr;
     }
     h1 {
         font-size: 20vw;
     }
+    
 }
